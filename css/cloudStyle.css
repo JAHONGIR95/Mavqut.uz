@@ -11,27 +11,7 @@ body {
     background-color: #ffffff;
 }
 
-.banner-main {
-    position: absolute;
-    top: 30px;
-    right: 120px;
-    width: 500px;
-    height: auto;
-    font-family: 'Baloo Da 2', cursive;
-    color: #040D3E;
-    text-align: left;
-
-}
-
-.banner-main span {
-    font-weight: 400;
-}
-
-.banner-main .h4 {
-    width: 450px;
-    opacity: 0;
-    animation: fromRight 1.5s 3s forwards;
-}
+/* ************** CLOUD MAIN 1 ******************* */
 
 @keyframes fromRight {
     0% {
@@ -42,74 +22,6 @@ body {
         transform: translateX(0);
         opacity: 1;
     }
-}
-
-.banner-main .p {
-    line-height: 30px;
-    font-weight: 500;
-    opacity: 0;
-    animation: fromRight 1.5s 3.4s forwards;
-    background-color: #8FCAE7;
-    
-}
-
-.banner-main .h4,
-.banner-main .p {
-    color: #040D3E;
-    font-size: 22px;
-    text-shadow: 0 4px 3px rgba(0, 0, 0, .1);
-}
-
-.banner-aside {
-    position: absolute;
-    top: 350px;
-    right: 120px;
-    opacity: 0;
-    animation: fromRight 1.5s 3.8s forwards;
-}
-
-.banner-aside p {
-    width: 370px;
-    font-family: 'Baloo Da 2', cursive;
-    font-size: 22px;
-    color: #000000;
-    text-align: right;
-    line-height: 30px;
-    text-shadow: 0 4px 3px rgba(0, 0, 0, .1);
-
-}
-
-.cloud-menu {
-    position: absolute;
-    top: 500px;
-    right: 230px;
-    font-family: 'Baloo Da 2', cursive;
-    font-size: 32px;
-    font-weight: 600;
-    text-shadow: 0 7px 6px rgba(0, 0, 0, .1);
-    transition: color .5s;
-    opacity: 0;
-    animation: fromRight 1.5s 4.2s forwards;
-}
-
-.cloud-menu:hover {
-    color: #56AF5C;
-}
-
-.direction {
-    position: absolute;
-    top: 500px;
-    right: 180px;
-    color: rgb(7, 19, 85);
-    font-size: 40px;
-    padding-left: 20px;
-    font-family: 'Baloo Da 2', cursive;
-    font-size: 32px;
-    font-weight: 600;
-    text-shadow: 0 7px 6px rgba(0, 0, 0, .1);
-    transition: transform .5s;
-    opacity: 0;
-    animation: fromRight 1.5s 4.6s forwards;
 }
 
 .wrapper {
@@ -123,49 +35,165 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-
-}
-
-.section-1-wrapper {
-    background: url(../images/cloud3.1.png) center no-repeat;
+    background: url(../images/cloudMain1.png) center no-repeat;
     background-size: cover;
-    animation: opacity 1.8s 2.2s ease-in-out;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation-name: scale;
-    
 }
 
-@keyframes scale {
+.main1-banner {
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    font-size: 28px;
+    color: #7E7E7E;
+    background: transparent;
+}
+
+@keyframes imageFromRight {
     0% {
-        transform: scale(1.2);
+       transform: translateX(700px);
     }
+
 
     100% {
-        transform: scale(1);
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
-@keyframes opacity {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 100%;
-    }
+.main1-banner {
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    background: transparent; 
 }
 
+.main1-banner h4 {
+    position: absolute;
+    bottom: 82%;
+    right: 18%;
+    color: #696464;
+    font-weight: 600;
+    width: 500px;
+    line-height: 40px;
+    opacity: 0;
+    animation: fromRight 1.4s 2.6s forwards ease-out;
+    -webkit-animation: fromRight 1.4s 2.6s forwards ease-out;
+    -moz-animation: fromRight 1.4s 2.6s forwards ease-out;
+}
 
-/* .cloud-menu {
-    font-family: Arial, Helvetica, sans-serif;
+.main1-banner h4 span {
+    font-weight: 400;
+}
+
+.main1-banner p span {
+    color: #53AC5E;
+}
+
+.main1-banner p{
+    position: absolute;
+    top: 40%;
+    right: 1%;
+    color: #696464;
+    font-size: 24px;
+    font-weight: 550;
+    width: 480px;
+    line-height: 30px;
+    text-align: left;
+    opacity: 0;
+    animation: fromRight 1.4s 3.8s forwards ease-out;
+    -webkit-animation: fromRight 1.4s 3.8s forwards ease-out;
+    -moz-animation: fromRight 1.4s 3.8s forwards ease-out;   
+}
+
+.main1-banner p:nth-child(2){
+    position: absolute;
+    top: 11%;
+    right: 12%;
+    width: 500px;
+    animation: fromRight 1.4s 3.2 forwards ease-out;
+    -webkit-animation: fromRight 1.4s 3.2s forwards ease-out;
+    -moz-animation: fromRight 1.4s 3.2s forwards ease-out;   
+}
+
+.main1-banner h5 {
+    position: absolute;
+    top: 67%;
+    right: 1%;
+    font-size: 26px;
+    color: #696464;
+    width: 450px;
+    font-weight: 600;
+    line-height: 35px;
+    opacity: 0;
+    animation: fromRight 1.4s 4.4s forwards ease-out;
+    -webkit-animation: fromRight 1.4s 4.4s forwards ease-out;
+    -moz-animation: fromRight 1.4s 4.4s forwards ease-out;
+}
+
+.section-1 .btn a{
+    position: absolute;
+    bottom: 6%;
+    right: 7%;
+    z-index: 1000;
+    letter-spacing: 1.4px;
+    font-family: 'Montserrat', sans-serif;
+    color: #53AC5E;
+    background: transparent;
+    outline: 0;
+    border-radius: 28px;
     font-size: 25px;
-    border: 2px solid #050F34;
-    border-radius: 25px;
-    padding: 5px 25px;
-    color: #050F34;
-} */
+    font-weight: 550;
+    border: 2px solid #61e470;
+    padding: 15px 65px 15px 25px;
+    opacity: 0;    
+    text-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+    transition: all .3s;
+    animation: kirish 1.5s 5s forwards ease-out;
+}
+
+@keyframes kirish {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.section-1 .btn a span {
+    position: absolute;
+    top: -15px;
+    left: 100px;
+    font-weight: 300;
+    font-size: 80px;
+    padding-left: 10px;
+}
+
+.section-1 .btn a:hover,
+.section-1 .btn a:active,
+.section-1 .btn a:visited {
+    color: #3296e2;
+    border: 2px solid transparent;
+}
+
+.lang-section1 {
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.lang-section1 li{
+    display: inline-block;
+    user-select: none;
+}
+
+.lang-section1 a {
+    color: #000000;
+}
+
+.lang-section1 span{
+    color: #d1cece;
+}
 
 /* ************** CLOUD MAIN 2 ******************* */
 
@@ -181,30 +209,9 @@ body {
     position: absolute;
     bottom: 1px;
     right: -70px;
-    width: 1100px;
+    width: 1200px;
     opacity: 0;
     animation: imageFromRight 1.5s 2.5s forwards ease-out;
-}
-
-
-@keyframes imageFromRight {
-    0% {
-       transform: translateX(700px);
-    }
-
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.main2-banner{
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    user-select: none;
-    background: transparent;
-    
 }
 
 @keyframes fromTop {
@@ -257,26 +264,16 @@ body {
    
     padding: 5px 10px;
     position: absolute;
-    top: 22%;
+    top: 20%;
     left: 13%;
     font-size: 27px;
     font-weight: 550;
     width: 500px;
+    line-height: 40px;
     opacity: 0;
     animation: fromLeft 1.4s 3.5s forwards ease-out;
     -webkit-animation: fromLeft 1.4s 3.5s forwards ease-out;
     -moz-animation: fromLeft 1.4s 3.5s forwards ease-out;   
-}
-
-@keyframes boxShadow {
-    0% {
-        box-shadow: 0 0 0 #bbbbbb;
-    }
-
-    100% {
-        
-        box-shadow: -8px 0 18px #bbbbbb;
-    }
 }
 
 .main2-banner h5 {
@@ -284,8 +281,8 @@ body {
     top: 63%;
     left: 5%;
     font-size: 28px;
-    color: #7E7E7E;
-    width: 350px;
+    color: #6e6e6e;
+    width: 330px;
     font-weight: 600;
     line-height: 35px;
     opacity: 0;
@@ -313,7 +310,7 @@ body {
     color: #d1cece;
 }
 
-.section-2 .btn {
+.section-2 .btn a{
     position: absolute;
     bottom: 5%;
     right: 3%;
@@ -331,7 +328,7 @@ body {
     opacity: 0;    
     text-shadow: 0 5px 5px rgba(0, 0, 0, .4);
     transition: all .3s;
-    animation: kirish 2s 3s forwards ease-out;
+    animation: kirish 2s 4s forwards ease-out;
 }
 
 @keyframes kirish {
@@ -339,8 +336,137 @@ body {
         opacity: 0%;
     }
 
-    50% {
-        color: #ebe704;
+    100% {
+        opacity: 1;
+    }
+}
+
+.section-2 .btn a span {
+    position: absolute;
+    top: -25px;
+    left: 100px;
+    font-weight: 300;
+    font-size: 80px;
+}
+
+.section-2 .btn a:hover,
+.section-2 .btn a:active,
+.section-2 .btn a:visited {
+    color: #f1f1f1;
+    border: 2px solid transparent;
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, .6);
+}
+
+/* ************** CLOUD MAIN 3 ******************* */
+
+@keyframes imageFromLeft {
+    0% {
+       transform: translateX(-700px);
+    }
+
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.section-3 {
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url(../images/3.png) center no-repeat;
+    background-size: cover;
+}
+
+.main3-banner {
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    font-size: 28px;
+    color: #7E7E7E;
+    background: transparent;
+}
+
+.main3-banner h4 {
+    position: absolute;
+    top: 3%;
+    left: 40%;
+    color: #696464;
+    font-size: 32px;
+    font-weight: 700;
+    width: 650px;
+    line-height: 40px;
+    opacity: 0;
+    animation: fromTop 1.5s 2.6s forwards ease-out;
+    -webkit-animation: fromTop 1.5s 2.6s forwards ease-out;
+    -moz-animation: fromTop 1.5s 2.6s forwards ease-out;
+}
+
+.main3-banner h4 span {
+    font-weight: 400;
+}
+
+.main3-banner p span {
+    color: #eb6668;
+}
+
+.main3-banner p{
+   
+    position: absolute;
+    top: 22%;
+    right: 3%;
+    color: #7a7878;
+    font-size: 24px;
+    font-weight: 550;
+    width: 650px;
+    line-height: 35px;
+    opacity: 0;
+    animation: fromRight 1.4s 3.5s forwards ease-out;
+    -webkit-animation: fromRight 1.4s 3.5s forwards ease-out;
+    -moz-animation: fromRight 1.4s 3.5s forwards ease-out;   
+}
+
+.main3-banner h5 {
+    position: absolute;
+    top: 58%;
+    right: 2%;
+    font-size: 22px;
+    color: #645f5f;
+    width: 400px;
+    font-weight: 600;
+    line-height: 35px;
+    opacity: 0;
+    animation: fromRight 1.4s 4.2s forwards ease-out;
+    -webkit-animation: fromRight 1.4s 4.2s forwards ease-out;
+    -moz-animation: fromRight 1.4s 4.2s forwards ease-out;
+}
+
+.section-3 .btn a{
+    position: absolute;
+    bottom: 8%;
+    right: 12%;
+    z-index: 1000;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    color: #f86e70;
+    background: transparent;
+    outline: 0;
+    border-radius: 28px;
+    font-size: 23px;
+    font-weight: 600;
+    border: 2px solid #f87d7f;
+    padding: 10px 50px 10px 25px;
+    opacity: 0;    
+    text-shadow: 0 4px 3px rgba(0, 0, 0, .2);
+    transition: all .3s;
+    animation: kirish 2s 5.2s forwards ease-out;
+}
+
+@keyframes kirish {
+    0% {
+        opacity: 0%;
     }
 
     100% {
@@ -348,19 +474,38 @@ body {
     }
 }
 
-.section-2 .btn span {
+.section-3 .btn a span {
     position: absolute;
-    top: -15px;
+    top: -25px;
     left: 100px;
-    font-weight: 400;
-    font-size: 60px;
+    font-weight: 300;
+    font-size: 80px;
 }
 
-.section-2 .btn:hover,
-.section-2 .btn:active,
-.section-2 .btn:visited {
-    color: #ebe704;
+.section-3 .btn a:hover,
+.section-3 .btn a:active,
+.section-3 .btn a:visited {
+    color: #eb8688;
     border: 2px solid transparent;
-    text-shadow: 2px 5px 5px rgba(0, 0, 0, .6);
+    text-shadow: 0 3px 5px rgba(0, 0, 0, .1);
 }
+
+.lang-section3 {
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.lang-section3 li{
+    display: inline-block;
+    user-select: none;
+}
+
+.lang-section3 a {
+    color: #000000;
+}
+
+.lang-section3 span{
+    color: #b1aaaa;
+}
+
 
