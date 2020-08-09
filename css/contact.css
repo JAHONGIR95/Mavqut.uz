@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.contact {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/SHALALALALALA.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* <!-- ******************* Header ********************** --> */
+/* <!-- ********************************************************* --> */
+
+header {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+}
+
+.sayt-nomi h4 a{
+    font-size: 30px;
+    font-weight: 600;
+    color: #1B2468;
+    text-shadow: 0px 3px 3px rgba(46, 17, 151, 0.3);
+
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a {
+    position: relative;
+    font-size: 15px;
+    color: #25318d;
+    font-weight: 600;
+    
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #25318d;
+    transition: width .5s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a span {
+    border-bottom: 2px solid #25318d;
+    padding-bottom: 3px;
+}
+
+button {
+    outline: 0;
+    padding: 5px 15px;
+    margin-top: 5px; 
+    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    transition: border .2s;
+}
+
+button a {
+    color: #ffffff;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    border: 1px solid transparent;
+}
+
+/* <!-- ****************** main ************************ --> */
+/* <!-- ********************************************************* --> */
+
+main {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+    width: 82%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    position: relative;
+    background-color: #d6afd6;
+}
+
+.aside-left {
+    position: absolute;
+    left: 0;
+    color: #25318d;
+    text-shadow: 0px 3px 3px rgba(46, 17, 151, 0.2);
+    
+}
+
+.kontaktlarimiz {
+    margin-bottom: 100px;
+}
+
+.kontaktlarimiz h4 {
+    position: absolute;
+    left: 20%;
+    font-size: 22px;
+    font-weight: 550;
+    color: #25318b;
+}
+
+.info {
+    line-height: 50px;
+}
+
+.manzil {
+    display: flex;
+    align-items: center;
+}
+
+.manzil img {
+
+}
+
+.manzil p {
+    letter-spacing: .8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.pochta {
+    display: flex;
+    align-items: center;
+}
+
+.pochta img {
+    
+}
+
+.pochta p {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.tel-raqam {
+    display: flex;
+    align-items: center;
+}
+
+.tel-raqam img {
+    
+}
+
+.tel-raqam p {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.info img {
+    width: 40px;
+    color: blue;
+    display: inline-block;
+    background-color: blue;
+    margin-right: 15px;
+}       
+
+.middle-line{
+    width: .2%;
+    height: 60%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    background-color: #3749d1;
+}
+
+
