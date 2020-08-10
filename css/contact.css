@@ -15,7 +15,7 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .contact {
@@ -114,6 +114,7 @@ button a {
     letter-spacing: 1px;
 }
 
+
 button:hover {
     border: 1px solid transparent;
 }
@@ -154,6 +155,7 @@ main {
     font-size: 22px;
     font-weight: 550;
     color: #25318b;
+    letter-spacing: 1px;
 }
 
 .info {
@@ -214,14 +216,115 @@ main {
 }       
 
 .middle-line{
-    width: .2%;
-    height: 60%;
+    width: .25%;
+    height: 66%;
     position: absolute;
     top: 0;
     left: 50%;
+    opacity: .7;
     transform: translate(-50% -50%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
     background-color: #3749d1;
 }
 
+.aside-right {
+    width: 35%;
+    position: absolute;
+    right: 0;
+    color: #25318d;
+    text-shadow: 0px 3px 3px rgba(46, 17, 151, 0.2);
+}
 
+.aloqa {
+    margin-bottom: 35px;
+}
+
+.aside-right h4 {
+    position: absolute;
+    left: 20%;
+    font-size: 22px;
+    font-weight: 500;
+    color: #25318b;
+    letter-spacing: 1px;
+    text-align: center; 
+}
+
+.aside-right p {
+    letter-spacing: .8px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form label {
+    display: block;
+    margin-left: 12px;
+    margin-bottom: -10px;
+    margin-top: 4px;
+    font-size: 10px;
+    user-select: none;
+    font-weight: 550;
+}
+
+.form {
+    text
+}
+
+.form input {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 22px;
+    border: 1px solid #3749d1;
+    opacity: .7;
+    border-radius: 25px;
+    padding-left: 15px;
+    background-color: #EEEBF6;
+    font-size: 10px;
+    font-weight: 530;
+    letter-spacing: .7px;
+}
+
+.form input:hover,
+.form input:focus {
+    outline: none;
+}
+
+.form textarea {
+    margin-top: 12px;
+    width: 100%;
+    border: 1px solid #3749d1;
+    opacity: .7;
+    background-color: #EEEBF6;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-top: 5px;
+    font-size: 12px;
+
+}
+
+.form textarea:hover,
+.form textarea:focus {
+    outline: none;
+}
+
+.btn button {
+    background-color: #25318B;
+    color: #ffffff;
+    border-radius: 9px;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    letter-spacing: .8px;
+    position: absolute;
+    right: 0;
+    transition: background-color .3s;
+}
+
+.btn button:hover {
+    background-color: #3648cc;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+}
