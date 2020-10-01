@@ -1,0 +1,2535 @@
+/* css code layout is the same as that of section */
+/* installing GILROY font family */
+@font-face {
+    font-family: 'gilroylight';
+    src: url('fonts/Gilroy/gilroy-light-webfont.woff2') format('woff2'),
+        url('fonts/Gilroy/gilroy-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'gilroylight', sans-serif;
+    position: relative;
+}
+
+/* client section carousel code */
+/* .owl-carousel {
+    padding: 10px;
+}
+
+.item {
+    width: 250px;
+    height: 300px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    border: .2px solid #2B2929;
+    border-radius: 5px;
+    margin: 50px 0;
+} */
+
+.img-fluid{
+    max-width: 100%;
+    height: 100%;
+    display: block;
+}
+.item p{
+    font-size: 2rem;
+    background: #262626;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* carousel section finished */
+/* animations section started */
+/* from left animation */
+@keyframes fromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-90px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* from left fast animation */
+@keyframes fromLeftFast {
+    0% {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* from to left animation */
+@keyframes fromToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px) translateY(200px) rotateY(90deg);
+    }
+
+    30% {
+        transform: translateX(-200px) translateY(200px) rotateY(10deg);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateX(0) translateY(200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* from right animation */
+@keyframes fromRight {
+    0% {
+        opacity: 0;
+        transform: translateY(220px) translateX(-50px) rotateX(0) rotateY(50deg);
+    }
+
+    50% {
+        opacity: .7;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(0) rotateX(0) rotateX(0);
+    }
+}
+
+/* animation for buttom */
+@keyframes fromRightButtom {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* from top animation */
+@keyframes fromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* from bottom animation */
+@keyframes fromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(90px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mbm {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        font-size: 15px;
+    }
+
+    70% {
+        opacity: 1;
+        font-size: 80px;
+    }
+
+    80% {
+        transform: rotateX(0);
+    }
+
+    90% {
+        opacity: .5;
+        transform: rotateX(-50px);
+    }
+
+    100% {
+        opacity: 0;
+
+    }
+}
+
+
+.mbm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.mbm h1 {
+    font-family: 'Rubik'sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: red;
+    animation: mbm 2s forwards linear;
+}
+
+
+
+
+/* underline animation for some items */
+#underline,
+#underline-white {
+    display: inline-block;
+}
+
+#underline::after,
+#underline-white::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width .5s;
+    margin-top: 5px;
+}
+
+#underline:hover::after,
+#underline-white:hover::after {
+    width: 100%;
+}
+
+#underline-white::after {
+    content: '';
+    background-color: rgb(184, 163, 163);
+}
+
+/* underline function code finished */
+
+
+
+/* first section code is given here */
+/* section one is devided into two part: left and right */
+/* left part code is given in below */
+.responsive-wrapper {
+    width: 1349px;
+    margin: 0 auto;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #000000;
+}
+
+.container {
+    position: relative;
+    width: 92%;
+    margin: 0 auto;
+}
+
+.first {
+    opacity: 0;
+    animation: fromLeft 1.2s 1.5s forwards;
+}
+
+.box {
+    position: absolute;
+    top: 75px;
+    width: 160px;
+    height: 40px;
+    background: #262626;
+    transition: .2s;
+}
+
+.box:hover {
+    opacity: 0;
+}
+
+.three-angle img {
+    position: absolute;
+    top: 85px;
+    left: 120px;
+    width: 70px;
+    height: 80px;
+    transform: rotate(90deg);
+    transition: .5s;
+}
+
+/* rotate animation creation below */
+
+.three-angle img:hover,
+.three-angle-2 img:hover {
+    transform: rotate(-360deg);
+    opacity: 0;
+
+}
+
+.banner-1 {
+    opacity: 0;
+    position: absolute;
+    top: 55px;
+    left: 190px;
+    animation: fromToLeft 2s .5s forwards linear;
+
+}
+
+.banner-1 h1 {
+    font-size: 65px;
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 79px;
+    letter-spacing: 2px;
+}
+
+/* right part code is given here */
+/* fixed navbar code is given here */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: inherit;
+    height: 70px;
+    background: #000;
+    padding: 0 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.brand {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.8em;
+    color: #CE0909;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    height: 50px;
+    line-height: 10px;
+}
+
+.navbar img {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+.navbar img:hover {
+    transform: rotateY(360deg);
+}
+
+.line,
+.line-2 {
+    width: 50px;
+    height: 1px;
+    background: #ffffff;
+}
+
+.navbar a {
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #ffffff;
+    transition: .3s;
+    -webkit-transition: .3s;
+}
+
+.navbar a:hover {
+    color: #f05555;
+}
+
+/* navbar code is finished here */
+
+.second {
+    position: absolute;
+    top: 20%;
+    right: 170px;
+    opacity: 0;
+    animation: fromLeftFast 1.2s 2.3s forwards;
+}
+
+.three-angle-2 img {
+
+    width: 60px;
+    height: 60px;
+    transition: .5s;
+}
+
+.banner-2 {
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    right: 50px;
+    width: 500px;
+    animation: fromRight 1.5s 2.2s forwards;
+}
+
+.banner-2 p {
+    font-size: 24px;
+    line-height: 38px;
+    color: #AFAFAF;
+    text-align: left;
+    font-weight: 300;
+    transition: .9s;
+}
+
+.banner-2 p:hover {
+    transform: translateY(-30px);
+}
+
+/* header button code should be here */
+button {
+    opacity: 0;
+    width: 200px;
+    height: 50px;
+    margin-top: 40px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background: #dd2323;
+    line-height: 0;
+    cursor: pointer;
+    transition: .5s;
+    animation: fromRightButtom 1s 2.5s forwards linear;
+}
+
+button a {
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 0;
+    color: #ffffff;
+    transition: .5s;
+}
+
+button:hover {
+    background: transparent;
+    margin-left: -30px;
+}
+
+button:hover a {
+    color: #e02f2f;
+}
+
+button a span {
+    font-weight: 900;
+    font-size: 25px;
+    padding-left: 2px;
+}
+
+/* Second section code is here */
+/* full background video section */
+
+.section-img {
+    width: 100%;
+    height: 100vh;
+    background: url(mbm-video.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* BIG section code is given here */
+/* header section is given here */
+
+.section-big {
+    position: relative;
+    background: #000000;
+}
+
+.header-section-big {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h3 {
+    margin: 100px 0 50px 0;
+    padding: 0px 0 0px 0;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.line-2 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-bottom: 50px;
+}
+
+/* Big section video code is given here */
+
+.video img {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    transform: translate(-50%);
+    margin: 0 auto;
+    width: 516px;
+    height: 344px;
+    object-fit: cover;
+    z-index: 1;
+    -o-object-fit: cover;
+}
+
+video {
+    display: block;
+    z-index: 10;
+}
+
+/* video code is finished here */
+
+/* frames section code started */
+/* frame code is given here */
+
+.section-frames {
+    position: relative;
+    background: #000000;
+    height: 1200px;
+}
+
+/* this is code for responsive design width:768px */
+.responsive-boxes-left {
+    position: absolute;
+    top: 700px;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+
+.responsive-boxes-right {
+    position: absolute;
+    top: 700px;
+    right: 0;
+    z-index: 10;
+    display: none;
+}
+
+.responsive-boxes-left .res-box1,
+.responsive-boxes-left .res-box2 {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 70px;
+    height: 500px;
+    border: 1px solid #989ea3;
+    border-left: none;
+}
+
+.responsive-boxes-left .res-box2 {
+    position: absolute;
+    top: 20px;
+    width: 90px;
+}
+
+.responsive-boxes-right .res-box1,
+.responsive-boxes-right .res-box2 {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 70px;
+    height: 500px;
+    border: 1px solid #989ea3;
+    border-right: none;
+}
+
+.responsive-boxes-right .res-box2 {
+    position: absolute;
+    top: 20px;
+    width: 90px;
+}
+
+/* code for responsive design finished here */
+
+.frame-1,
+.frame-2 {
+    position: absolute;
+    top: 320px;
+    left: 51%;
+    transform: translateX(-50%);
+    width: 852px;
+    height: 800px;
+    border: 1px solid #a4aec2;
+}
+
+.frame-1 {
+    position: absolute;
+    top: 285px;
+    left: 48.5%;
+    transform: translateX(-50%);
+}
+
+/* frames devided into two section: box-1 and box-2 */
+/* below you may find boxes code */
+
+.box-1,
+.box-2 {
+    width: 50%;
+    height: 800px;
+    float: left;
+}
+
+.box-1 {
+    border-right: 1px solid #a4aec2;
+}
+
+.clear {
+    clear: both;
+}
+
+.box-1 h2,
+.box-2 h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 52px;
+    font-weight: 300;
+    margin: 120px 0 50px 0;
+    line-height: 87px;
+}
+
+.box-1 p,
+.box-2 p {
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+    padding: 0 3px 45px 3px;
+}
+
+.litte-frame {
+    position: absolute;
+    top: 200px;
+    left: 171px;
+    width: 91px;
+    height: 178px;
+    border: 15px solid #ffffff;
+    transition: .3s;
+}
+
+.litte-frame:hover {
+    opacity: 0;
+}
+
+.res-buttom {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 25px;
+    background: #ffffff;
+}
+
+/* Clients section css code started here */
+/* first header section of clients section code will be given */
+
+.section-clients-header {
+
+    width: 100%;
+    height: 800px;
+    background: #000000;
+}
+
+.clients-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.clients-header h3 {
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.clients-header .line-2 {
+    margin: 10px 0 60px 0;
+}
+
+.clients-header p {
+    color: #666;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+
+/* Half scrolling page section code started */
+
+.half-scrolling-page {
+    display: flex;
+}
+
+.scroll {
+    width: 50%;
+    min-height: 100vh;
+    background: #000000;
+    box-sizing: border-box;
+}
+
+.fixed-right {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #131313;
+}
+
+/* right fixed part code started */
+.top-fix {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.fixed-media {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0 15px;
+}
+
+.fixed-media > p {
+    font-size: 25px;
+    color: #989ea3;
+    font-weight: 300;
+}
+
+.fixed-media > .line {
+    margin: 0 50px;
+}
+
+.media i {
+    color: #6F7377;
+    padding: 15px;
+    transition: .3s;
+}
+
+.media i:hover {
+    color: #ffffff;
+}
+
+.points {
+    width: 30%;
+}
+
+.points img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.top-right {
+    width: 100px;
+    height: 40%;
+}
+
+.bottom-fix {
+    height: 60%;
+    width: 100%;
+}
+
+.bottom-fix-inner {
+    background-image: url(team.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* right fixed section code finished */
+/* left scrolling section started */
+
+.scroll img {
+    width: 33.334%;
+    height: 200px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+/* CONTACTS section started */
+.contacts {
+    width: 100%;
+    background: #ffffff;
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-header h3 {
+    color: #07080C;
+    font-size: 41px;
+    margin-top: 100px;
+}
+
+.contact-header .line-2 {
+    background: #000000;
+    margin: 30px 0 60px 0;
+}
+
+.contact-header .address h1 {
+    color: #07080C;
+    font-size: 70px;
+    font-weight: 300;
+
+}
+
+/* contact header finished */
+/* This is responsive contact section width:637px */
+.responsive-contact {
+}
+
+/* contact body started */
+.responsive-aloqa{
+    display: none;
+}
+.aloqa{
+    display: block;
+}
+.contact-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+    transform: translateX(-48px);
+    margin: 100px auto 50px;
+}
+
+.contact-left,
+.contact-right {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tel-num {
+    transform: translateX(20px);
+}
+
+.line-pr,
+.line-pr-2 {
+    width: 50px;
+    height: 1.4px;
+    background: #07080C;
+    display: block;
+}
+.line-pr-2{
+    display: none;
+}
+
+.contact-left h3,
+.contact-right h3 {
+    margin: 0;
+    color: #07080C;
+    font-size: 40px;
+}
+
+/* contact footer part started */
+
+.contact-footer {
+    margin: 0 auto;
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.contact-footer p {
+    color: #07080C;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* contact section finished */
+
+/* this is all-sections class used to combine all section, this class is used to created sticky footer */
+.all-sections {
+    width: 100%;
+    background: #000;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 100vh;
+}
+
+/* .all {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+} */
+
+/* sticky footer section code started */
+.footer {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #131313;
+    color: #666666;
+    padding-bottom: 0px;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 0 70px 0;
+}
+
+.footer img {
+    transition: 1s;
+}
+
+.footer img:hover {
+    transform: rotateY(360deg);
+}
+
+.footer .line-2 {
+    margin: 25px 0 75px;
+}
+
+.footer p {
+    color: #F1EAEA;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+/* footer header finished */
+/* EMAIL section code started here */
+
+.message {
+    width: 855px;
+    height: 105px;
+    margin: 0 auto;
+    border: 1px solid #666666;
+    border-radius: 62px;
+    padding: 0 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    margin-bottom: 50px;
+}
+
+.focused {
+    border: 1.5px solid #fff;
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.e-mail {
+    font-family: 'Rubik', sans-serif;
+    color: #F1EAEA;
+    font-size: 25px;
+    font-weight: 300;
+    width: 600px;
+    height: 50px;
+    padding-left: 20px;
+    margin-right: 0px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    background: transparent !important;
+}
+
+#submit {
+    color: #F1EAEA;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    border: none;
+    background: none;
+    transition: .4s;
+}
+
+#submit:hover {
+    color: rgb(245, 51, 51);
+}
+
+/* footer section code finished */
+
+.section1 {
+    position: relative;
+    margin: 0;
+    font-size: 0;
+    overflow: hidden;
+
+}
+
+.section1 canvas {
+    background: black;
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+.section1 input {
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    bottom: 35px;
+    left: calc(50% - 125px);
+    background: none;
+    color: white;
+    font-size: 30px;
+    font-family: arial;
+    text-align: center;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+/* RESONSIVE WEB DESIGN STARTS HERE */
+@media (min-width:1366px) {
+    .responsive-wrapper {
+        width: 1349px;
+    }
+
+    .container {
+        width: 98%;
+    }
+}
+
+@media (max-width:1366px) {
+
+    .responsive-wrapper {
+        width: 100%;
+    }
+
+    .container {
+        width: 98%;
+    }
+}
+
+@media (max-width:1300px) {
+    .banner-2 {
+        right: 20px;
+    }
+
+    .litte-frame {
+        left: 138px;
+    }
+
+
+    .scroll img {
+        height: 216px;
+    }
+
+    .fixed-media > .line {
+        margin: 0 30px;
+    }
+}
+
+@media (max-width:1200px) {
+    .banner-1 h1 {
+        font-size: 55px;
+        line-height: 70px;
+    }
+
+    .banner-2 p {
+        font-size: 22px;
+    }
+
+    .litte-frame {
+        left: 87px;
+    }
+
+
+    .scroll img {
+        height: 200px;
+    }
+}
+
+@media (max-width:1100px) {
+    .banner-1 {
+        left: 165px;
+    }
+
+    .banner-1 h1 {
+        font-size: 47px;
+        line-height: 60px;
+    }
+
+    .banner-2 {
+        position: absolute;
+        right: 0px;
+    }
+
+    .banner-2 p {
+        font-size: 20px;
+        width: 450px;
+        line-height: 36px;
+    }
+
+    .box {
+        width: 140px;
+        height: 40px;
+    }
+
+    .three-angle img {
+        left: 100px;
+        width: 60px;
+        height: 70px;
+    }
+
+    .litte-frame {
+        left: 36px;
+    }
+
+
+    .scroll img {
+        height: 183px;
+    }
+
+    .fixed-media {
+        width: 100%;
+        margin: 25px 0 10px;
+    }
+
+    .fixed-media > p {
+        font-size: 22px;
+    }
+
+    .fixed-media > .line {
+        margin: 0 30px;
+    }
+
+    .media i {
+        padding: 10px;
+    }
+
+    .points {
+        width: 30%;
+    }
+
+    .contact-header h3 {
+        font-size: 37px;
+    }
+
+    .contact-header .address h1 {
+        font-size: 65px;
+    }
+
+    .contact-body {
+        width: 800px;
+        transform: translateX(-10px);
+    }
+
+    .contact-footer {
+        width: 700px;
+        transform: translateX(50px);
+    }
+
+    .contact-left h3,
+    .contact-right h3 {
+        font-size: 35px;
+    }
+
+    .contact-footer p {
+        font-size: 18px;
+    }
+
+    .tel-num {
+        transform: translateX(10px);
+    }
+}
+
+@media (max-width:1024px) {
+    .section {
+        min-height: 750px;
+    }
+
+    .banner-1 h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .banner-2 p {
+        font-size: 22px;
+        width: 450px;
+    }
+
+    .litte-frame {
+        top: 210px;
+        left: 100px;
+    }
+
+   
+
+    .scroll {
+        min-height: 700px;
+    }
+
+    .fixed-right {
+        height: 700px;
+    }
+
+    .scroll img {
+        height: 170px;
+    }
+
+    .fixed-media {
+        width: 100%;
+        margin: 55px 0 35px;
+    }
+
+    .fixed-media > p {
+        font-size: 21px;
+    }
+
+    .fixed-media > .line {
+        margin: 0 20px;
+    }
+
+    .media i {
+        padding: 7px;
+    }
+
+    .points {
+        width: 35%;
+    }
+
+    .contact-header h3 {
+        font-size: 35px;
+    }
+
+    .contact-header .address h1 {
+        font-size: 60px;
+    }
+
+    .contact-body {
+        width: 800px;
+        transform: translateX(-11px);
+    }
+
+    .contact-left h3,
+    .contact-right h3 {
+        font-size: 35px;
+    }
+
+    .all-sections {
+        margin-bottom: 100vh;
+    }
+
+    .footer {
+        height: 100vh;
+    }
+
+    .footer p {
+        font-size: 22px;
+    }
+
+    .message {
+        width: 755px;
+        margin-bottom: 50px;
+    }
+
+    .e-mail {
+        width: 500px;
+    }
+
+    #submit {
+        font-size: 23px;
+    }
+
+    submit:active,
+    #s#submit:hover,
+    #ubmit:link,
+    #submit:visited {
+        color: rgb(245, 51, 51);
+    }
+
+    button:hover {
+        margin-left: 0px;
+        border: 2px solid #dd2323;
+        border-radius: 25px;
+    }
+
+    .section1 canvas {
+        height: 700px;
+    }
+
+    .banner-2 p {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:1000px) {
+   
+
+    .scroll img {
+        height: 167px;
+    }
+}
+
+@media (max-width:900px) {
+    .second {
+        right: 100px;
+    }
+
+    .section-frames {
+        height: 1150px;
+    }
+
+    .frame-1,
+    .frame-2 {
+        width: 730px;
+        height: 750px;
+    }
+
+    .frame-1 {
+        top: 295px;
+    }
+
+    .box-1,
+    .box-2 {
+        height: 750px;
+    }
+
+    .box-1 h2,
+    .box-2 h2 {
+        font-size: 45px;
+        line-height: 80px;
+    }
+
+    .box-1 p,
+    .box-2 p {
+        font-size: 18px;
+        padding: 0 3px 40px 3px;
+    }
+
+    .litte-frame {
+        top: 185px;
+        left: 35px;
+    }
+
+   
+
+    .scroll img {
+        height: 150px;
+    }
+
+    .fixed-media > p {
+        font-size: 20px;
+    }
+
+    .contact-header .address h1 {
+        font-size: 55px;
+    }
+
+    .contact-body {
+        width: 700px;
+        transform: translateX(-20px);
+    }
+
+    .contact-footer {
+        width: 600px;
+    }
+
+    .contact-left h3,
+    .contact-right h3 {
+        font-size: 33px;
+    }
+
+    .message {
+        width: 655px;
+        height: 100px;
+    }
+
+    .e-mail {
+        width: 400px;
+        font-size: 20px;
+    }
+
+    #submit {
+        font-size: 21px;
+    }
+}
+
+@media (max-width:800px) {
+    .litte-frame {
+        display: none;
+    }
+
+    .scroll img {
+        height: 133px;
+    }
+
+    .fixed-media {
+        margin: 15px 0 15px;
+        flex-direction: column;
+    }
+
+    .fixed-media > .line {
+        margin: 20px 0;
+    }
+
+    .points {
+        width: 60%;
+    }
+}
+
+@media (max-width:768px) {
+    .section {
+        min-height: 100vh;
+    }
+
+    .box {
+        top: 115px;
+    }
+
+    .three-angle img {
+        top: 125px;
+        left: 110px;
+    }
+
+    .banner-1 {
+        top: 115px;
+        left: 190px;
+    }
+
+    .banner-1 h1 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    .second {
+        top: 40%;
+        right: 170px;
+    }
+
+    .banner-2 {
+        top: 52%;
+        right: 10px;
+        width: 500px;
+    }
+
+    .banner-2 p {
+        margin-bottom: 50px;
+    }
+
+    .video {
+        display: none;
+    }
+
+    .section-frames {
+        height: 1400px;
+    }
+
+    .frame-1,
+    .frame-2 {
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        border: none;
+    }
+
+    .box-1,
+    .box-2 {
+        width: 100%;
+        height: 550px;
+        float: none;
+    }
+
+    .box-1 {
+        border-right: none;
+    }
+
+    .box-1 h2,
+    .box-2 h2 {
+        font-size: 55px;
+        line-height: 70px;
+    }
+
+    .box-1 p,
+    .box-2 p {
+        font-size: 18px;
+    }
+
+    .line-2 {
+        margin: 15px 75px;
+    }
+
+    .responsive-boxes-left {
+        top: 25px;
+        display: block;
+    }
+
+    .responsive-boxes-right {
+        top: 700px;
+        display: block;
+    }
+
+   
+
+    .half-scrolling-page {
+        flex-direction: column-reverse;
+    }
+
+    .fixed-right {
+        width: 100%;
+        height: 800px;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .bottom-fix-inner {
+        background-attachment: fixed;
+    }
+
+    .fixed-media {
+        flex-direction: row;
+        margin: 30px 25px;
+    }
+
+    .fixed-media > p {
+        font-size: 25px;
+    }
+
+    .fixed-media > .line {
+        margin: 0 50px;
+    }
+
+    .media i {
+        padding: 15px;
+    }
+
+    .points {
+        width: 30%;
+        margin-bottom: 40px;
+    }
+
+    .scroll {
+        width: 100%;
+    }
+
+    .scroll img {
+        height: 256px;
+    }
+
+    .contact-header h3 {
+        font-size: 35px;
+    }
+
+    .contact-header .address h1 {
+        font-size: 52px;
+    }
+
+    .contact-body {
+        width: 620px;
+        transform: translateX(10px);
+    }
+
+    .contact-footer {
+        width: 570px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 200px;
+    }
+
+    .contact-left h3,
+    .contact-right h3 {
+        font-size: 35px;
+    }
+
+
+    .tel-num {
+        transform: translateX(-5px);
+    }
+
+    .section1 {
+        display: none;
+    }
+
+    .message {
+        width: 555px;
+        height: 90px;
+        padding: 0 35px;
+    }
+
+    .e-mail {
+        width: 300px;
+        font-size: 18px;
+    }
+
+    #submit {
+        font-size: 19px;
+    }
+}
+
+@media (max-width:700px) {
+    .responsive-aloqa{
+        display: block;
+    }
+    .aloqa {
+        display: none;
+    }
+    .brand {
+        display: none;
+    }
+
+    .section {
+        height: 850px;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+
+    
+
+    .scroll img {
+        height: 233px;
+    }
+
+    .contact-header h3 {
+        font-size: 32px;
+    }
+
+    .contact-header .address h1 {
+        font-size: 50px;
+    }
+
+    .contact-body {
+        width: 580px;
+    }
+
+    .contact-footer {
+        width: 510px;
+    }
+
+    .contact-left h3,
+    .contact-right h3 {
+        font-size: 32px;
+    }
+
+    .tel-num {
+        transform: translateX(5px);
+    }
+
+    .footer p {
+        font-size: 20px;
+    }
+
+    .message {
+        width: 550px;
+    }
+
+    .e-mail {
+        width: 400px;
+    }
+
+    #submit {
+        font-size: 19px;
+    }
+}
+
+@media(max-width:637px) {
+    .responsive-aloqa{
+        display: block;
+        padding-bottom: 40px;
+    }
+    .aloqa {
+        display: none;
+    }
+
+    .responsive-contact {
+        display: block;
+        margin: 70px auto;
+        width: 60%;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 200px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transform: translateX(0px);
+    }
+
+    .responsive-contact-footer p {
+        font-size: 18px;
+        line-height: 30px;
+        transform: translateX(70px);
+    }
+
+    .contact-header .address h1 {
+        font-size: 45px;
+    }
+
+    .scroll img {
+        height: 212px;
+    }
+
+    .fixed-media > p {
+        font-size: 20px;
+    }
+
+    .fixed-media > .line {
+        margin: 0 20px;
+    }
+
+    .message {
+        width: 400px;
+        height: 80px;
+    }
+
+    .e-mail {
+        width: 200px;
+        font-size: 16px;
+    }
+
+    #submit {
+        font-size: 17px;
+    }
+
+    .footer p {
+        width: 350px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 18px;
+    }
+
+    .fixed-media > .line {
+        margin: 0 20px;
+    }
+
+    .media i {
+        padding: 7px;
+    }
+
+    .scroll img {
+        height: 220px;
+    }
+
+    .banner-1 h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .banner-2 {
+        top: 50%;
+        left: 0;
+        width: 600px;
+    }
+
+    .banner-2 p {
+        font-size: 18px;
+        line-height: 30px;
+        padding: 20px;
+    }
+}
+
+@media (max-width:600px) {
+    .section {
+        height: 100vh;
+    }
+    .banner-1 {
+        top: 125px;
+        left: 68px;
+    }
+    .first {
+        position: absolute;
+        top: -10px;
+        left: 350px;
+    }
+
+    .banner-1 h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    @keyframes fromToLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(150px) translateY(150px)
+            rotateY(90deg);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0) translateY(0) rotateY(0deg);
+        }
+    }
+
+    .second {
+        top: 36%;
+        right: 100px;
+    }
+
+    .three-angle-2 img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .banner-2 {
+        top: 50%;
+        right: 50px;
+        width: 450px;
+    }
+
+    .banner-2 p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    button {
+        width: 170px;
+        height: 40px;
+        margin: 0px;
+    }
+
+    button a {
+        font-size: 19px;
+    }
+
+    .brand {
+        display: none;
+    }
+   
+
+    .fixed-media > .line {
+        margin: 0 20px;
+    }
+
+    .media i {
+        padding: 10px;
+    }
+
+    .scroll img {
+        height: 200px;
+    }
+}
+
+@media (max-width:550px) {
+    .banner-1 {
+        top: 105px;
+        left: 68px;
+    }
+
+    .first {
+        position: absolute;
+        top: -20px;
+        left: 300px;
+    }
+
+    .banner-1 h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .second {
+        top: 36%;
+        right: 100px;
+    }
+
+    .three-angle-2 img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .banner-2 {
+        top: 50%;
+        left: 50px;
+        width: 400px;
+    }
+
+    .banner-2 p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .box-1 h2,
+    .box-2 h2 {
+        font-size: 45px;
+        line-height: 65px;
+    }
+
+    .responsive-boxes-left .res-box1,
+    .responsive-boxes-left .res-box2,
+    .responsive-boxes-right .res-box1,
+    .responsive-boxes-right .res-box2 {
+        width: 50px;
+    }
+
+    .responsive-boxes-left .res-box2,
+    .responsive-boxes-right .res-box2 {
+        width: 70px;
+    }
+
+   
+
+    .clients-header h3 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .clients-header p {
+        font-size: 22px;
+        line-height: 40px;
+    }
+
+    .fixed-media {
+        margin: 20px 0 0px;
+    }
+
+    .fixed-media > p {
+        font-size: 21px;
+    }
+
+    .fixed-media > .line {
+        margin: 0 20px;
+    }
+
+    .points {
+        margin: 30px 0;
+    }
+
+    .message {
+        width: 400px;
+        height: 80px;
+    }
+
+    .e-mail {
+        width: 200px;
+        font-size: 16px;
+    }
+
+    #submit {
+        font-size: 17px;
+    }
+
+    .footer p {
+        width: 350px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 18px;
+    }
+
+    .scroll img {
+        height: 183px;
+    }
+    .contact-header h3 {
+        font-size: 30px;
+    }
+    
+    .contact-header .address h1 {
+        font-size: 35px;   
+    }
+}
+
+@media (max-width:500px) {
+    .banner-1 {
+        top: 125px;
+        left: 50px;
+    }
+
+    .first {
+        position: absolute;
+        top: -10px;
+        left: 250px;
+    }
+
+    .banner-1 h1 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .banner-2 {
+        top: 50%;
+        left: 0;
+        width: 400px;
+    
+    }
+
+    .banner-2 p {
+        font-size: 18px;
+        padding: 0 30px;
+        line-height: 28px;
+    }
+    button{
+        margin-left: 30px;
+    }
+
+    .box-1 h2,
+    .box-2 h2 {
+        font-size: 40px;
+        line-height: 65px;
+    }
+
+    .box-1 p,
+    .box-2 p {
+        font-size: 18px;
+        padding: 0 0 40px 0;
+    }
+
+    .clients-header p {
+        font-size: 20px;
+        line-height: 36px;
+    }
+
+   
+    nav{
+        height: 60px;
+        justify-content: center;
+    }
+
+    .responsive-contact {
+        display: block;
+    }
+
+    .scroll img {
+        width: 50%;
+        height: 250px;
+    }
+    .line-pr-2{
+        display: block;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 300px;
+        transform: translateX(0px);
+    }
+    .responsive-contact {
+        width: 70%;
+    }
+
+    .responsive-contact-footer p {
+        font-size: 20px;
+        line-height: 30px;
+        transform: translateX(0px);
+    }
+
+    .contact-header .address h1 {
+        font-size: 32px;
+    }
+    .contact-header h3 {
+        font-size:35px;
+    }
+    .fixed-right {
+        height: 600px;
+    }
+}
+@media(max-width:480px){
+    /* .first {
+        top: -40px;
+        left: 50%;
+    }
+    .box {
+        width: 100px;
+        height: 25px;
+    }
+    .three-angle img {
+        top: 120px;
+        left: 80px;
+        width: 30px;
+        height: 40px;
+    } */
+
+    .first {
+        position: absolute;
+        top: -30px;
+        left: 220px;
+    }
+    .banner-1 {
+        top: 145px;
+        left: 0;
+        animation: fromToLeft 1s .5s forwards linear;
+    }
+
+    .banner-1 h1 {
+        font-size: 35px;
+        line-height: 40px;
+        padding-left: 30px;
+    }
+
+    .banner-2 {
+        top: 55%;
+        left: 0;
+        box-sizing: border-box;
+        width: 410px;
+    }
+
+    .banner-2 p {
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 28px;
+        box-sizing: border-box;
+        
+    }
+
+    nav{
+        padding: 0;
+        justify-content: center;
+    }
+    .section{
+        height: 100vh;
+    }
+    .second {
+        top: 45%;
+        animation: fromLeftFast 1.2s 2s forwards;
+    }
+    .three-angle-2 img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* .banner-2 p {
+        font-size: 13px;
+        padding: 0 40px;
+        line-height: 25px;
+        margin-bottom: 40px;
+    } */
+    button{
+        margin-left: 20px;
+    }
+    h3 {      
+        font-size: 18px;
+    }
+    
+    .box-1 h2,
+    .box-2 h2 {
+        font-size: 35px;
+        line-height: 53px;
+    }
+    .box-1 p,
+    .box-2 p {
+        font-size: 15px;
+        padding: 0 3px 35px 3px;
+    }
+    .responsive-boxes-left .res-box1,
+    .responsive-boxes-left .res-box2,
+    .responsive-boxes-right .res-box1,
+    .responsive-boxes-right .res-box2 {
+        width: 30px;
+        height: 430px;
+    }
+    .responsive-boxes-left .res-box2,
+    .responsive-boxes-right .res-box2 {
+        width: 50px;
+    }
+    .section-frames {
+        height: 1300px;
+    }
+    .fixed-media {
+        flex-direction: column-reverse;
+        margin: 0px 0px;
+    }
+    .fixed-media > p {
+        font-size: 22px;
+        padding-top: 25px;
+    }
+
+    .fixed-media > .line {
+        /* margin: 30px 0; */
+        display: none;
+    }
+    .media i {
+        padding: 0 25px;
+    }
+    .points {
+        width: 40%;
+        margin: 15px 0;
+    }
+   
+    .scroll img{
+        height: 240px;
+    }
+   
+    .contact-header h3 {
+        font-size:35px;
+        margin: 70px 0 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+    .responsive-contact-footer p {
+        font-size: 16px;
+    }
+
+    .contact-header .address h1 {
+        font-size: 30px;
+    }
+   
+/* 
+    .contact-header h3 {
+        font-size: 30px;
+    }
+    .contact-left,
+    .contact-right {
+        width: 140px;
+        transform: translateX(25px);
+    }
+    .contact-left h3,
+    .contact-right h3 {
+        font-size: 18px;
+    }
+
+    .responsive-contact-footer p {
+        font-size: 11px;
+        line-height: 20px;
+        transform: translateX(90px);
+    }
+    .contact-header .address h1 {
+        font-size: 19px;
+    } */
+    .clients-header h3{
+        font-size: 25px;
+    }
+    .clients-header p {
+        font-size: 20px;
+        line-height: 35px;
+        width: 90%;
+    }
+    .message {
+        width: 400px;
+        padding-left: 10px;
+    }
+    .e-mail {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    #submit {
+        font-size: 12px;
+    }
+
+    .footer p {
+        width: 290px;
+    }
+   
+    
+   
+    /* nav {
+        display: none;
+    }
+    .res-buttom{
+        display: none;
+    } */
+}
+@media (max-width:450px){
+    .banner-2 p {
+        padding: 0 10px;
+        width: 390px;
+    }
+    .scroll img{
+        height: 225px;
+    }
+
+    .message {
+        width: 380px;
+        height: 50px;
+        padding-left: 10px;
+    }
+    .e-mail {
+        width: 220px;
+        font-size: 16px;
+    }
+
+    #submit {
+        font-size: 16px;
+    }
+
+    .footer p {
+        width: 380px;
+        font-size: 21px;
+    }
+}
+
+@media(max-width:420px){
+    .first {
+        position: absolute;
+        top: -30px;
+        left: 180px;
+    }
+    .banner-2{
+        width: 370px;
+    }
+    .banner-2 p {
+        font-size: 17px;
+    }
+    .scroll img{
+        height: 210px;
+    }
+    .clients-header p {
+        font-size: 17px;
+        line-height: 35px;
+        width: 90%;
+    }
+    .contact-header h3 {
+        font-size:35px;
+        margin: 70px 0 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        font-size: 30px;
+    }
+    .responsive-contact-footer p {
+        font-size: 16px;
+    }
+
+    .contact-header .address h1 {
+        font-size: 25px;
+    }
+
+    .message {
+        width: 350px;
+        height: 50px;
+        padding-left: 10px;
+    }
+    .e-mail {
+        width: 200px;
+        font-size: 15px;
+    }
+
+    #submit {
+        font-size: 15px;
+    }
+
+    .footer p {
+        width: 350px;
+        font-size: 20px;
+    }
+}
+@media(max-width:400px){
+    .banner-2 p{
+        font-size: 16px;
+        width: 350px;
+    }
+    .scroll img{
+        height: 200px;
+    }
+    .line-pr,
+    .line-pr-2 {
+        width: 40px;
+    }
+    .scroll img{
+        height: 200px;
+    }
+    .clients-header p {
+        font-size: 16px;
+        width: 85%;
+    }
+    .contact-header h3 {
+        font-size:30px;
+        margin: 70px 0 20px;
+    }
+    
+    .contact-left h3, .contact-right h3 {
+        font-size: 28px;
+    }
+
+    .message {
+        width: 330px;
+    }
+    .e-mail {
+        width: 190px;
+    }
+
+    #submit {
+        font-size: 15px;
+    }
+
+    .footer p {
+        width: 330px;
+        font-size: 18px;
+    }
+}
+@media(max-width:370px){
+    .first {
+        left: 160px;
+    }
+    .banner-2 {
+        width: 330px;
+    }
+    .scroll img{
+        height: 185px;
+    }
+}
+@media(max-width:350px){
+    .first {
+        position: absolute;
+        top: -30px;
+        left: 160px;
+    }
+    .banner-2 p{
+        width: 310px;
+    }
+    .scroll img{
+        height: 175px;
+    }
+    .message {
+        width: 320px;
+    }
+    .e-mail {
+        width: 180px;
+    }
+
+    #submit {
+        font-size: 14px;
+    }
+
+    .footer p {
+        width: 310px;
+        font-size: 17px;
+    }
+}
+@media(max-width:330px){
+    .first {
+        left: 140px;
+    }
+    .second{
+        right: 50px;
+    }
+    .banner-1 {
+        top: 145px;
+        left: 0;
+    }
+
+    .banner-1 h1 {
+        font-size: 32px;
+        padding-left: 20px;
+    }
+    .banner-2 {
+        width: 300px;
+    }
+    .scroll img{
+        height: 165px;
+    }
+}
+@media(max-width:310px){
+    .first {
+        left: 120px;
+    }
+
+    .banner-1 h1 {
+        font-size: 32px;
+        padding-left: 10px;
+    }
+    .banner-2 {
+        width: 280px;
+    }
+    .scroll img{
+        height: 155px;
+    }
+}
+
+.scroll-btn {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity: .7;
+    background-color: #dd2323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .2);
+    z-index: 10000;
+}
+
+
